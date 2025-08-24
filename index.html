@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Hardware - Your Trusted Choice | Industrial Tools & Plumbing</title>
+    <meta name="description"
+        content="Union Hardware - Wholesale & Retail dealers of Industrial Tools, Plumbing, Hardware accessories, and Plywood in Gujarat. Your trusted choice for quality hardware solutions.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #C41E3A 0%, #1E3A8A 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .gear-icon {
+            width: 40px;
+            height: 40px;
+            background: #1E3A8A;
+            border-radius: 50%;
+            margin: 0 10px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gear-icon::before {
+            content: '⚙';
+            color: white;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(196, 30, 58, 0.8)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f0f0f0"/><g fill="%23ddd"><rect x="100" y="100" width="80" height="20"/><rect x="200" y="150" width="60" height="15"/><rect x="300" y="120" width="40" height="25"/><rect x="400" y="180" width="70" height="18"/><circle cx="600" cy="300" r="50"/><rect x="700" y="250" width="90" height="22"/><rect x="900" cy="200" width="55" height="30"/></g></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #C41E3A;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1E3A8A;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: #C41E3A;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #C41E3A;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            border: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #C41E3A;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #C41E3A, #1E3A8A);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            color: #1E3A8A;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .business-type {
+            background: linear-gradient(135deg, #1E3A8A, #C41E3A);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .business-type h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .business-type p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background: #f0f8ff;
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #C41E3A, #1E3A8A);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            color: #1E3A8A;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .contact-details p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .contact-details a {
+            color: #C41E3A;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .map-container {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1E3A8A, #C41E3A);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+
+        .footer-section p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            opacity: 0.8;
+        }
+
+        .map-container p>a {
+            color: #C41E3A;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    UNI<div class="gear-icon"></div>N HARDWARE
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="tagline">"Your Trusted Choice"</div>
+                <h1>UNION HARDWARE</h1>
+                <div class="hero-description">
+                    Leading wholesale and retail dealers specializing in industrial tools, plumbing solutions, hardware
+                    accessories, and plywood. Serving commercial and industrial clients across Gujarat with quality
+                    products and reliable service.
+                </div>
+                <div class="cta-buttons">
+                    <a href="tel:+919824240065" class="btn btn-primary">
+                        📞 Call Now: +91-982424 0065
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        📍 Visit Our Office
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Union Hardware</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Choice for Quality Hardware</h3>
+                    <p>
+                        Union Hardware has established itself as a reliable partner for businesses across Gujarat. Under
+                        the leadership of Prafulbhai, we have built a reputation for providing high-quality industrial
+                        tools, plumbing solutions, and hardware accessories.
+                    </p>
+                    <p>
+                        Our commitment to excellence and customer satisfaction has made us the preferred choice for both
+                        wholesale buyers and retail customers. We understand the unique requirements of commercial and
+                        industrial projects, ensuring that our clients receive the right products at competitive prices.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Products</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <!-- <div style="background: linear-gradient(135deg, #C41E3A, #1E3A8A); height: 400px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;"> -->
+                    <!-- Quality Hardware Solutions<br>Since Day One -->
+                    <div>
+                        <img src="./WhatsApp Image 2025-08-24 at 6.00.12 PM.jpeg" alt="Union Hardware"
+                            style="width: 100%; height: auto; border-radius: 15px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Type Section -->
+    <section class="business-type">
+        <div class="container">
+            <h2>Wholesale & Retail Dealers</h2>
+            <p>Serving both individual customers and bulk buyers with competitive pricing and reliable service</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services & Products</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Industrial Tools</h3>
+                    <p>Comprehensive range of professional-grade industrial tools for manufacturing, construction, and
+                        maintenance applications. Quality tools from trusted brands.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚰</div>
+                    <h3>Plumbing & Fittings</h3>
+                    <p>Complete plumbing solutions including pipes, fittings, fixtures, and accessories for residential,
+                        commercial, and industrial plumbing projects.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔩</div>
+                    <h3>Hardware Accessories</h3>
+                    <p>Extensive selection of hardware accessories including fasteners, brackets, hinges, locks, and
+                        other essential hardware components.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🪵</div>
+                    <h3>Plywood & Materials</h3>
+                    <p>High-quality plywood and building materials for construction and furniture projects. Various
+                        grades and sizes available for all applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Union Hardware</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">👤</div>
+                        <div class="contact-details">
+                            <h4>Owner</h4>
+                            <p>Prafulbhai<br>
+                                <a href="tel:+919824240065">+91-982424 0065</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Sales & Purchase</h4>
+                            <p>Parth Pankhaniya<br>
+                                <a href="tel:+919998766921">+91-99987 66921</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:unionhardware25@gmail.com">unionhardware25@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>No. 11 - Shreeji Complex<br>
+                                Near Por chokdi, Por - kayavarohan Rd<br>
+                                Vadodra, Gujarat 391243</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/919998766921" target="_blank">Chat with us on WhatsApp</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div>
+                        <h3 style="color: #1E3A8A; margin-bottom: 10px;">Visit Our Office</h3>
+                        <p>Located in Shreeji Complex, Por-kayavarohan Road</p>
+                        <!-- <p style="margin-top: 20px; color: #C41E3A;">Map integration available on live website</p> -->
+                        <p><a href="https://maps.app.goo.gl/1motmM4BSzaiMHkeA" target="_blank">Click Here To
+                                Navigate</a></p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.123308923678!2d73.1769576!3d22.1339476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc381173ff141%3A0xe85641c2f44372fd!2sUnion%20Hardware!5e0!3m2!1sen!2sin!4v1692888888888!5m2!1sen!2sin"
+                            width="100%" height="290" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Union Hardware</h3>
+                    <p>"Your Trusted Choice" for all industrial tools, plumbing solutions, and hardware accessories in
+                        Gujarat.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p>Industrial Tools | Plumbing & Fittings | Hardware Accessories | Plywood & Materials</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Phone: +91-982424 0065<br>
+                        Email: unionhardware25@gmail.com<br>
+                        Gujarat 391243</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Union Hardware. All rights reserved. | Wholesale & Retail Dealers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.8s ease-out';
+            observer.observe(card);
+        });
+
+        // Observe contact items
+        document.querySelectorAll('.contact-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'all 0.6s ease-out';
+            observer.observe(item);
+        });
+    </script>
+</body>
+
+</html>
